@@ -6,7 +6,7 @@
 /*   By: qmuntada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/27 17:18:17 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/04/27 17:30:22 by qmuntada         ###   ########.fr       */
+/*   Updated: 2016/02/13 20:29:41 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 void	error_arg(int n)
 {
 	if (n == 0)
-		ft_putstr_fd("No paramater found\n\n", 2);
+		ft_putstr_fd("Aucune parametre trouver\n\n", 2);
+	else if (n == 2)
+		ft_putstr_fd("Trop de parametre envoye\n\n", 2);
 	else
-		ft_putstr_fd("Incorrect paramater\n", 2);
-	ft_putstr_fd("FRACT'OL : Please reboot this program with one", 2);
-	ft_putstr_fd(" of the following parameter :\n", 2);
-	ft_putstr_fd("M for Mandelbrot\nJ for Julia\nN for Newton\n", 2);
+		ft_putstr_fd("Parametre incorrecte\n\n", 2);
+	ft_putstr_fd("FRACT'OL : Relancer le programme avec l'un", 2);
+	ft_putstr_fd(" des parametres suivants :\n", 2);
+	ft_putstr_fd("M pour Mandelbrot\nJ pour Julia\nN pour Newton\n", 2);
 	exit(EXIT_FAILURE);
 }
 
@@ -28,6 +30,8 @@ int		frac_type(int ac, char **av)
 {
 	if (ac < 2)
 		error_arg(0);
+	if (ac > 2)
+		error_arg(2);
 	if (av[1][0] == 'M')
 		return (1);
 	else if (av[1][0] == 'J')

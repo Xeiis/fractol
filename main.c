@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/16 16:33:55 by qmuntada          #+#    #+#             */
-/*   Updated: 2015/04/27 17:13:23 by qmuntada         ###   ########.fr       */
+/*   Created: 2015/01/16 16:33:55 by dchristo          #+#    #+#             */
+/*   Updated: 2016/02/13 20:19:53 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,12 @@ int		expose_hook(t_env *e)
 	else if (e->ftype == 3)
 		newton(e);
 	mlx_put_image_to_window(e->mlx, e->win, e->img.img_ptr, 0, 0);
-	mlx_string_put(e->mlx, e->win, 10, 10, 0xFFFFFF, "Iterations :");
-	mlx_string_put(e->mlx, e->win, 150, 10, 0xFFFFFF, ft_itoa(e->iter));
+	mlx_string_put(e->mlx, e->win, 10, 10, 0xFFFFFF,
+		   	ft_strjoin("UP / DOWN Iter (A/D) : ",ft_itoa(e->iter)));
+	mlx_string_put(e->mlx, e->win, 10, 30, 0xFFFFFF, "Change Color (T)");
+	mlx_string_put(e->mlx, e->win, 10, 50, 0xFFFFFF,
+		   	"Move (fleche directionnelle)");
+	mlx_string_put(e->mlx, e->win, 10, 70, 0xFFFFFF, "Mouse for Movement");
 	return (1);
 }
 
