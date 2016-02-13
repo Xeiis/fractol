@@ -1,2 +1,2 @@
-# fractol
+# Fractol
 FRACT'OL
