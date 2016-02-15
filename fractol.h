@@ -6,7 +6,7 @@
 /*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 16:47:53 by dchristo          #+#    #+#             */
-/*   Updated: 2016/02/13 19:59:57 by dchristo         ###   ########.fr       */
+/*   Updated: 2016/02/15 12:00:09 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # include "libft/libft.h"
 # include <time.h>
 
-# define WIDTH 640
-# define HEIGHT 480
+# define WIDTH 1280
+# define HEIGHT 960
 
 # define ESC 53
 # define SPACE 49

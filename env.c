@@ -6,7 +6,7 @@
 /*   By: qmuntada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/27 17:18:17 by qmuntada          #+#    #+#             */
-/*   Updated: 2016/02/13 20:29:41 by dchristo         ###   ########.fr       */
+/*   Updated: 2016/02/15 14:08:29 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	error_arg(int n)
 {
 	if (n == 0)
-		ft_putstr_fd("Aucune parametre trouver\n\n", 2);
+		ft_putstr_fd("Aucun parametre trouver\n\n", 2);
 	else if (n == 2)
 		ft_putstr_fd("Trop de parametre envoye\n\n", 2);
 	else
