@@ -6,7 +6,7 @@
 /*   By: qmuntada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/27 17:18:17 by qmuntada          #+#    #+#             */
-/*   Updated: 2016/02/15 14:08:29 by dchristo         ###   ########.fr       */
+/*   Updated: 2016/02/17 14:25:15 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	init_sval(t_env *e)
 
 void	init_env(t_env *e, int ac, char **av)
 {
-	t_vec3	normedemerde;
+	t_vec3	color;
 
 	e->ftype = frac_type(ac, av);
 	e->img.width = WIDTH;
@@ -84,8 +84,8 @@ void	init_env(t_env *e, int ac, char **av)
 	e->ys = 0;
 	e->iter = 50;
 	e->theme = 0;
-	normedemerde = (t_vec3){0.0, 0.0, 0.0};
-	e->color = normedemerde;
+	color = (t_vec3){0.0, 0.0, 0.0};
+	e->color = color;
 	init_sval(e);
 	e->xoril = e->xbot;
 	e->xorir = e->xtop;
