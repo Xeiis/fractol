@@ -6,7 +6,7 @@
 /*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 16:33:55 by dchristo          #+#    #+#             */
-/*   Updated: 2016/02/15 14:23:46 by dchristo         ###   ########.fr       */
+/*   Updated: 2016/09/10 23:13:55 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int		expose_hook(t_env *e)
 		newton(e);
 	mlx_put_image_to_window(e->mlx, e->win, e->img.img_ptr, 0, 0);
 	mlx_string_put(e->mlx, e->win, 10, 10, 0xFFFFFF,
-		   	ft_strjoin("UP / DOWN Iter (A/D) : ",ft_itoa(e->iter)));
+			ft_strjoin("UP / DOWN Iter (A/D) : ", ft_itoa(e->iter)));
 	mlx_string_put(e->mlx, e->win, 10, 30, 0xFFFFFF, "Change Color (T)");
 	mlx_string_put(e->mlx, e->win, 10, 50, 0xFFFFFF,
-		   	"Move (fleche directionnelle)");
+			"Move (fleche directionnelle)");
 	mlx_string_put(e->mlx, e->win, 10, 70, 0xFFFFFF, "Mouse for Movement");
 	return (1);
 }

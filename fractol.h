@@ -6,7 +6,7 @@
 /*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 16:47:53 by dchristo          #+#    #+#             */
-/*   Updated: 2016/02/16 13:34:38 by dchristo         ###   ########.fr       */
+/*   Updated: 2016/09/10 23:08:24 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@
 # define HEIGHT 480
 
 # define ESC 53
-# define SPACE 49
-# define W 13
 # define A 0
 # define S 1
 # define D 2
@@ -37,12 +35,12 @@
 # define UP 126
 # define DOWN 125
 
-typedef struct		s_vec3
+typedef struct			s_vec3
 {
-	double			x;
-	double			y;
-	double			z;
-}					t_vec3;
+	double				x;
+	double				y;
+	double				z;
+}						t_vec3;
 
 typedef struct			s_img
 {
@@ -63,6 +61,7 @@ typedef struct			s_env
 	t_vec3				color;
 	int					ftype;
 	int					iter;
+	int					stop;
 	int					x;
 	int					y;
 	int					theme;

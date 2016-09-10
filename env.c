@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qmuntada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/04/27 17:18:17 by qmuntada          #+#    #+#             */
-/*   Updated: 2016/02/17 14:25:15 by dchristo         ###   ########.fr       */
+/*   Created: 2015/04/27 17:18:17 by dchristo          #+#    #+#             */
+/*   Updated: 2016/09/10 23:38:52 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	error_arg(int n)
+static void	error_arg(int n)
 {
 	if (n == 0)
 		ft_putstr_fd("Aucun parametre trouver\n\n", 2);
@@ -26,7 +26,7 @@ void	error_arg(int n)
 	exit(EXIT_FAILURE);
 }
 
-int		frac_type(int ac, char **av)
+int			frac_type(int ac, char **av)
 {
 	if (ac < 2)
 		error_arg(0);
@@ -42,7 +42,7 @@ int		frac_type(int ac, char **av)
 	return (0);
 }
 
-void	init_sval(t_env *e)
+void		init_sval(t_env *e)
 {
 	if (e->ftype == 1)
 	{
@@ -68,7 +68,7 @@ void	init_sval(t_env *e)
 	}
 }
 
-void	init_env(t_env *e, int ac, char **av)
+void		init_env(t_env *e, int ac, char **av)
 {
 	t_vec3	color;
 
@@ -83,6 +83,7 @@ void	init_env(t_env *e, int ac, char **av)
 	e->xs = 0;
 	e->ys = 0;
 	e->iter = 50;
+	e->stop = 0;
 	e->theme = 0;
 	color = (t_vec3){0.0, 0.0, 0.0};
 	e->color = color;

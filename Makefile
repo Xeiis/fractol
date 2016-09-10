@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dchristo <ybarbier@student.42.fr>          +#+  +:+       +#+         #
+#    By: dchristo <marvin@42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 11:35:46 by dchristo          #+#    #+#              #
-#    Updated: 2016/02/17 17:40:56 by dchristo         ###   ########.fr        #
+#    Updated: 2016/09/10 23:14:59 by dchristo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ PATH_INC = ./libft/
 
 CC = gcc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -O3 -Ofast
 
-SRC = $(shell ls -1 | grep "\.c")
+SRC = $(shell ls | grep "\.c")
 
 OBJS = $(SRC:.c=.o)
 
