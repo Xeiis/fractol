@@ -6,7 +6,7 @@
 /*   By: dchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 16:33:47 by dchristo          #+#    #+#             */
-/*   Updated: 2016/09/10 23:15:28 by dchristo         ###   ########.fr       */
+/*   Updated: 2017/05/21 14:01:52 by dchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	key_press2(int keycode, t_env *e)
 	else if ((e->iter > 1 && keycode == A) || keycode == D)
 		e->iter += (keycode == D ? 35 : -35);
 	else if (keycode == S)
-		e->stop = 1;
+		e->stop = e->stop == 0 ? 1 : 0;
 }
 
 int			key_press(int keycode, t_env *e)
